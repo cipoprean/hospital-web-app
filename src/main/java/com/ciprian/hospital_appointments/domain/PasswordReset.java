@@ -13,12 +13,12 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = "password_reset_code")
-public class PasswordResetCode {
+@Table(name = "password_reset")
+public class PasswordReset {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    private String passwordResetid;
 
     @Column(unique = true)
     private String code;

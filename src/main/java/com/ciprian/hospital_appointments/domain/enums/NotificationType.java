@@ -1,4 +1,7 @@
 package com.ciprian.hospital_appointments.domain.enums;
 
 public enum NotificationType {
+    EMAIL,
+    SMS,
+    APPLICATION
 }
