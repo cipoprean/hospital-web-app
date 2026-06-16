@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome to DAT Health!</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <style>
+        body {
+            font-family: Inter, Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .header {
+            background-color: #0d9488;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 30px;
+            text-align: left;
+            line-height: 1.6;
+            color: #333333;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #0d9488;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .footer {
+            background-color: #eeeeee;
+            color: #666666;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            border-top: 1px solid #dddddd;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Bun venit la MyDigitalHospital!</h1>
+    </div>
+    <div class="content">
+        <p>Salutare <strong th:text="${name}"></strong>,</p>
+        <p>Vă mulțumim pentru înregistrare! Acum faceți parte din platforma noastră de telemedicină de încredere, care
+            vă conectează
+            cu medici specialiști pentru consultații online.</p>
+        <p>Vă puteți autentifica acum pentru a putea completa profilul și a vă programa prima întâlnire..</p>
+        <div class="button-container">
+            <a class="button" th:href="${loginLink}">Autentificare</a>
+        </div>
+        <p>
+            Suntem aici pentru a vă ajuta să vă gestionați sănătatea cu ușurință.</p>
+        <p>MyDigitalHospital</p>
+    </div>
+    <div class="footer">
+        &copy; <span th:text="${T(java.time.Year).now()}">2026</span> MyDigitalHospital. All rights reserved.
+    </div>
+</div>
+</body>
+</html>

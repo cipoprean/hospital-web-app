@@ -1,6 +1,6 @@
 package com.ciprian.hospital_appointments.domain;
 
-import com.ciprian.hospital_appointments.domain.enums.BloodGrouo;
+import com.ciprian.hospital_appointments.domain.enums.BloodGroup;
 import com.ciprian.hospital_appointments.domain.enums.GenoType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 @Data
@@ -17,16 +18,19 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @Table(name = "patient")
-public class Patient {
+public class Patient extends BaseEntity {
 
+    @Enumerated(EnumType.STRING)
+    BloodGroup bloodGroup;
     String firstName;
     String lastName;
     LocalDate birthDate;
     String phoneNumber;
     @Lob
     String knownAllergies;
-    @Enumerated(EnumType.STRING)
-    BloodGrouo bloodGrouo;
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID patientId;
     @Enumerated(EnumType.STRING)
     GenoType genoType;
     @OneToOne(fetch = FetchType.LAZY)
@@ -34,9 +38,6 @@ public class Patient {
     User user;
     @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL, orphanRemoval = true)
     List<Appointment> appointments;
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private String patientId;
 
 
 }

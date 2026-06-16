@@ -8,8 +8,8 @@ CREATE TABLE appointment (
     appointment_status VARCHAR(50) NOT NULL,
     doctor_id UUID NOT NULL,
     patient_id UUID NOT NULL,
-    created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    created_at TIMESTAMP NOT NULL,
+    updated_at TIMESTAMP,
     created_by VARCHAR(255),
     updated_by VARCHAR(255),
 

@@ -8,6 +8,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+import java.util.UUID;
+
 
 @Entity
 @Data
@@ -15,11 +17,11 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @Table(name = "doctor")
-public class Doctor {
+public class Doctor extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    String doctorId;
+    UUID doctorId;
 
     String firstName;
     String lastName;

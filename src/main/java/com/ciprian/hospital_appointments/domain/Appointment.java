@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Data
@@ -15,11 +16,11 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 @Table(name = "appointment")
-public class Appointment {
+public class Appointment extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    String appointmentId;
+    UUID appointmentId;
     @Column(nullable = false)
     LocalDateTime startDate;
     LocalDateTime endDate;

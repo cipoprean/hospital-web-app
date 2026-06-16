@@ -1,6 +1,6 @@
 package com.ciprian.hospital_appointments.domain.enums;
 
-public enum BloodGrouo {
+public enum BloodGroup {
     A_POSITIVE,
     A_NEGATIVE,
     B_POSITIVE,

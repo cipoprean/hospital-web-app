@@ -13,8 +13,8 @@ CREATE TABLE patient (
 
     user_id UUID NOT NULL UNIQUE,
 
-    created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    created_at TIMESTAMP NOT NULL,
+    updated_at TIMESTAMP,
     created_by VARCHAR(255),
     updated_by VARCHAR(255),
 

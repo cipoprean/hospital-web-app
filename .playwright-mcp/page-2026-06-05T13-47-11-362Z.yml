@@ -1,0 +1,12 @@
+- generic [ref=e3]:
+  - generic [ref=e6]:
+    - img [ref=e8]
+    - generic [ref=e43]:
+      - textbox [disabled] [ref=e44]: /hospital/v3/api-docs
+      - button "Explore" [ref=e45] [cursor=pointer]
+    - button [ref=e47] [cursor=pointer]:
+      - img [ref=e48]
+  - generic [ref=e51]:
+    - generic:
+      - generic:
+        - generic: loading

@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Data
@@ -14,11 +15,11 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 @Table(name = "password_reset")
-public class PasswordReset {
+public class PasswordReset extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private String passwordResetid;
+    private UUID passwordResetId;
 
     @Column(unique = true)
     private String code;

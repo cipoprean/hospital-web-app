@@ -1,0 +1,8 @@
+com/ciprian/hospital_appointments/api/RoleControllerTest.class
+com/ciprian/hospital_appointments/api/PatientControllerTest.class
+com/ciprian/hospital_appointments/api/UserControllerTest.class
+com/ciprian/hospital_appointments/api/AuthenticationControllerTest.class
+com/ciprian/hospital_appointments/service/PatientServiceTest.class
+com/ciprian/hospital_appointments/api/DoctorControllerTest.class
+com/ciprian/hospital_appointments/HospitalAppointmentsApplicationTests.class
+com/ciprian/hospital_appointments/service/UserServiceTest.class
