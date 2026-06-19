@@ -1,13 +1,11 @@
 package com.ciprian.hospital_appointments.util;
 
-import lombok.RequiredArgsConstructor;
 import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.UUID;
 
 @UtilityClass
-@RequiredArgsConstructor
 @Slf4j
 public class JitsiMeetingLinkGenerator {
 

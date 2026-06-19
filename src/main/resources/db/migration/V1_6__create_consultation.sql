@@ -4,6 +4,7 @@ CREATE TABLE CONSULTATION (
     consultation_date TIMESTAMP WITHOUT TIME ZONE,
 
     objective_findings TEXT,
+    subjective_notes TEXT,
     assesments TEXT,
     plan TEXT,
 

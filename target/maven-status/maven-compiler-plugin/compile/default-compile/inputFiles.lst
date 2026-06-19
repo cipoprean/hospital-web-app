@@ -11,6 +11,7 @@
 /Users/ciprianoprean/Documents/workspace/hospital-web-app/src/main/java/com/ciprian/hospital_appointments/config/CorsConfig.java
 /Users/ciprianoprean/Documents/workspace/hospital-web-app/src/main/java/com/ciprian/hospital_appointments/config/GlobalExceptionHandler.java
 /Users/ciprianoprean/Documents/workspace/hospital-web-app/src/main/java/com/ciprian/hospital_appointments/config/SecurityConfig.java
+/Users/ciprianoprean/Documents/workspace/hospital-web-app/src/main/java/com/ciprian/hospital_appointments/config/SwaggerConfig.java
 /Users/ciprianoprean/Documents/workspace/hospital-web-app/src/main/java/com/ciprian/hospital_appointments/config/exceptions/BadRequestException.java
 /Users/ciprianoprean/Documents/workspace/hospital-web-app/src/main/java/com/ciprian/hospital_appointments/config/exceptions/CustomAccesDeniedHandler.java
 /Users/ciprianoprean/Documents/workspace/hospital-web-app/src/main/java/com/ciprian/hospital_appointments/config/exceptions/CustomAuthenticationEntryPointHandler.java
@@ -65,3 +66,7 @@
 /Users/ciprianoprean/Documents/workspace/hospital-web-app/src/main/java/com/ciprian/hospital_appointments/service/RoleService.java
 /Users/ciprianoprean/Documents/workspace/hospital-web-app/src/main/java/com/ciprian/hospital_appointments/service/UserService.java
 /Users/ciprianoprean/Documents/workspace/hospital-web-app/src/main/java/com/ciprian/hospital_appointments/util/CodeGenerator.java
+/Users/ciprianoprean/Documents/workspace/hospital-web-app/src/main/java/com/ciprian/hospital_appointments/util/JitsiMeetingLinkGenerator.java
+/Users/ciprianoprean/Documents/workspace/hospital-web-app/src/main/java/com/ciprian/hospital_appointments/util/NameUtil.java
+/Users/ciprianoprean/Documents/workspace/hospital-web-app/src/main/java/com/ciprian/hospital_appointments/validator/DateRangeValidator.java
+/Users/ciprianoprean/Documents/workspace/hospital-web-app/src/main/java/com/ciprian/hospital_appointments/validator/ValidDateRange.java

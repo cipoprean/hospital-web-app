@@ -43,7 +43,8 @@ public class SecurityConfig {
                         req.requestMatchers("/api/auth/**", "/api/doctors/**", "/api/user/**",
                                 "/v3/api-docs/**",
                                 "/swagger-ui/**",
-                                "/swagger-ui.html").permitAll())
+                                        "/swagger-ui.html").permitAll()
+                                .anyRequest().authenticated())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class);
 

@@ -24,7 +24,7 @@ public class Patient extends BaseEntity {
     BloodGroup bloodGroup;
     String firstName;
     String lastName;
-    LocalDate birthDate;
+    LocalDate birthday;
     String phoneNumber;
     @Lob
     String knownAllergies;
@@ -32,7 +32,7 @@ public class Patient extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID patientId;
     @Enumerated(EnumType.STRING)
-    GenoType genoType;
+    GenoType genotype;
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", unique = true, nullable = false)
     User user;

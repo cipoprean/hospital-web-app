@@ -1,12 +1,14 @@
 package com.ciprian.hospital_appointments.service;
 
 import com.ciprian.hospital_appointments.config.exceptions.BadRequestException;
+import com.ciprian.hospital_appointments.config.exceptions.NotFoundException;
 import com.ciprian.hospital_appointments.domain.*;
 import com.ciprian.hospital_appointments.domain.enums.RoleEnum;
 import com.ciprian.hospital_appointments.domain.enums.Specialization;
 import com.ciprian.hospital_appointments.dto.*;
 import com.ciprian.hospital_appointments.repository.*;
 import com.ciprian.hospital_appointments.util.CodeGenerator;
+import com.ciprian.hospital_appointments.util.NameUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -67,6 +69,9 @@ public class AuthenticationService {
 
         var validateRoles = validateAndLoadRoles(userRegistrationDto.getRoles());
 
+        if (validateRoles.isEmpty()) {
+            throw new NotFoundException("Operatiunea de inregistrare a esuat! Rolul sau rolurile utilizator nu exista!");
+        }
         var userBuilder = User
                 .builder()
                 .email(userRegistrationDto.getEmail())
@@ -205,9 +210,14 @@ public class AuthenticationService {
     }
 
     private void createPatientProfile(User user) {
+
+        var numeComplet = NameUtil.parseFullName(user.getName());
+
         patientRepository.save(
                 Patient
                         .builder()
+                        .firstName(numeComplet.getOrDefault("firstName", "Prenume"))
+                        .lastName(numeComplet.getOrDefault("lastName", "Nume"))
                         .user(user)
                         .build()
         );
@@ -216,9 +226,13 @@ public class AuthenticationService {
     }
 
     private void createDoctorProfile(UserRegistrationDto dto, User user) {
+        var numeComplet = NameUtil.parseFullName(user.getName());
+
         doctorRepository.save(
                 Doctor
                         .builder()
+                        .firstName(numeComplet.getOrDefault("firstName", "Prenume"))
+                        .lastName(numeComplet.getOrDefault("lastName", "Nume"))
                         .specialization(dto.getSpecialization())
                         .licenseNumber(dto.getLicenseNumber())
                         .user(user)

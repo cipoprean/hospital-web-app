@@ -1,8 +1,12 @@
 /Users/ciprianoprean/Documents/workspace/hospital-web-app/src/test/java/com/ciprian/hospital_appointments/HospitalAppointmentsApplicationTests.java
+/Users/ciprianoprean/Documents/workspace/hospital-web-app/src/test/java/com/ciprian/hospital_appointments/api/AppointmentControllerTest.java
 /Users/ciprianoprean/Documents/workspace/hospital-web-app/src/test/java/com/ciprian/hospital_appointments/api/AuthenticationControllerTest.java
+/Users/ciprianoprean/Documents/workspace/hospital-web-app/src/test/java/com/ciprian/hospital_appointments/api/ConsultationControllerTest.java
 /Users/ciprianoprean/Documents/workspace/hospital-web-app/src/test/java/com/ciprian/hospital_appointments/api/DoctorControllerTest.java
 /Users/ciprianoprean/Documents/workspace/hospital-web-app/src/test/java/com/ciprian/hospital_appointments/api/PatientControllerTest.java
 /Users/ciprianoprean/Documents/workspace/hospital-web-app/src/test/java/com/ciprian/hospital_appointments/api/RoleControllerTest.java
 /Users/ciprianoprean/Documents/workspace/hospital-web-app/src/test/java/com/ciprian/hospital_appointments/api/UserControllerTest.java
+/Users/ciprianoprean/Documents/workspace/hospital-web-app/src/test/java/com/ciprian/hospital_appointments/service/AppointmentServiceTest.java
+/Users/ciprianoprean/Documents/workspace/hospital-web-app/src/test/java/com/ciprian/hospital_appointments/service/ConsultationServiceTest.java
 /Users/ciprianoprean/Documents/workspace/hospital-web-app/src/test/java/com/ciprian/hospital_appointments/service/PatientServiceTest.java
 /Users/ciprianoprean/Documents/workspace/hospital-web-app/src/test/java/com/ciprian/hospital_appointments/service/UserServiceTest.java

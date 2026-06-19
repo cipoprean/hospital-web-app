@@ -21,6 +21,9 @@ public class Consultation extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.UUID)
     UUID consultationId;
     private LocalDateTime consultationDate;
+
+    @Lob
+    private String subjectiveNotes;
     @Lob
     private String objectiveFindings;
     @Lob

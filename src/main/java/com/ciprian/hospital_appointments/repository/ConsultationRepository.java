@@ -5,10 +5,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 public interface ConsultationRepository extends JpaRepository<Consultation, String> {
 
-    Optional<Consultation> findByAppointmentAppointmentId(String appointmentId);
+    Optional<Consultation> findByAppointmentAppointmentId(UUID appointmentId);
 
-    List<Consultation> findByAppointmentPatientPatientIdOrderByConsultationDateDesc(String patientId);
+    List<Consultation> findByAppointmentPatientPatientIdOrderByConsultationDateDesc(UUID patientId);
 }

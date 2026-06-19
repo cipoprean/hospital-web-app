@@ -2,6 +2,7 @@ com/ciprian/hospital_appointments/domain/BaseEntity.class
 com/ciprian/hospital_appointments/domain/Doctor$DoctorBuilder.class
 com/ciprian/hospital_appointments/domain/Patient.class
 com/ciprian/hospital_appointments/service/CustomUserDetailsService.class
+com/ciprian/hospital_appointments/validator/ValidDateRange.class
 com/ciprian/hospital_appointments/service/AuthenticationService$1.class
 com/ciprian/hospital_appointments/dto/AppointmentDto.class
 com/ciprian/hospital_appointments/util/CodeGenerator.class
@@ -9,9 +10,11 @@ com/ciprian/hospital_appointments/domain/Doctor.class
 com/ciprian/hospital_appointments/dto/ModificaRolDto.class
 com/ciprian/hospital_appointments/config/SecurityConfig.class
 com/ciprian/hospital_appointments/repository/PatientRepository.class
+com/ciprian/hospital_appointments/service/AppointmentService.class
 com/ciprian/hospital_appointments/dto/UserLoginResponseDto.class
 com/ciprian/hospital_appointments/domain/PasswordReset.class
 com/ciprian/hospital_appointments/dto/ConsultationDto$ConsultationDtoBuilder.class
+com/ciprian/hospital_appointments/api/AppointmentController.class
 com/ciprian/hospital_appointments/domain/Consultation$ConsultationBuilder.class
 com/ciprian/hospital_appointments/config/exceptions/NotFoundException.class
 com/ciprian/hospital_appointments/dto/UserDto$UserDtoBuilder.class
@@ -24,6 +27,7 @@ com/ciprian/hospital_appointments/dto/NotificationDto.class
 com/ciprian/hospital_appointments/service/RoleService.class
 com/ciprian/hospital_appointments/domain/Consultation.class
 com/ciprian/hospital_appointments/dto/DoctorDto$DoctorDtoBuilder.class
+com/ciprian/hospital_appointments/util/JitsiMeetingLinkGenerator.class
 com/ciprian/hospital_appointments/dto/ResponseDto$ResponseDtoBuilder.class
 com/ciprian/hospital_appointments/HospitalAppointmentsApplication.class
 com/ciprian/hospital_appointments/domain/User$UserBuilder.class
@@ -71,4 +75,5 @@ com/ciprian/hospital_appointments/domain/Role$RoleBuilder.class
 com/ciprian/hospital_appointments/config/exceptions/CustomAuthenticationEntryPointHandler.class
 com/ciprian/hospital_appointments/dto/PatientDto$PatientDtoBuilder.class
 com/ciprian/hospital_appointments/dto/UpdatePasswordDto.class
+com/ciprian/hospital_appointments/validator/DateRangeValidator.class
 com/ciprian/hospital_appointments/dto/AppointmentDto$AppointmentDtoBuilder.class

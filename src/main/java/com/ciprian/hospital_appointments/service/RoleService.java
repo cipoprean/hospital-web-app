@@ -28,7 +28,7 @@ public class RoleService {
 
         return ResponseDto.<Role>builder()
                 .statusCode(HttpStatus.OK.value())
-                .message("Userul a fost adaugat cu succes!")
+                .message("Rolul a fost adaugat cu succes!")
                 .data(savedRole)
                 .build();
     }

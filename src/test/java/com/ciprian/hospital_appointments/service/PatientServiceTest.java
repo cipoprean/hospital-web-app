@@ -6,7 +6,6 @@ import com.ciprian.hospital_appointments.domain.User;
 import com.ciprian.hospital_appointments.domain.enums.BloodGroup;
 import com.ciprian.hospital_appointments.domain.enums.GenoType;
 import com.ciprian.hospital_appointments.dto.PatientDto;
-import com.ciprian.hospital_appointments.dto.ResponseDto;
 import com.ciprian.hospital_appointments.repository.PatientRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -18,13 +17,13 @@ import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 
 import java.time.LocalDate;
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class PatientServiceTest {
@@ -59,11 +58,11 @@ class PatientServiceTest {
                 .patientId(patientId)
                 .firstName("Ion")
                 .lastName("Popescu")
-                .birthDate(LocalDate.of(1990, 1, 15))
+                .birthday(LocalDate.of(1990, 1, 15))
                 .phoneNumber("0712345678")
                 .knownAllergies("Polen")
                 .bloodGroup(BloodGroup.A_POSITIVE)
-                .genoType(GenoType.AA)
+                .genotype(GenoType.AA)
                 .user(user)
                 .build();
 
@@ -126,9 +125,9 @@ class PatientServiceTest {
         assertThat(patient.getLastName()).isEqualTo("Popescu Jr");
         assertThat(patient.getPhoneNumber()).isEqualTo("0798765432");
         assertThat(patient.getKnownAllergies()).isEqualTo("Lapte");
-        assertThat(patient.getBirthDate()).isEqualTo(LocalDate.of(1995, 5, 20));
+        assertThat(patient.getBirthday()).isEqualTo(LocalDate.of(1995, 5, 20));
         assertThat(patient.getBloodGroup()).isEqualTo(BloodGroup.B_POSITIVE);
-        assertThat(patient.getGenoType()).isEqualTo(GenoType.AS);
+        assertThat(patient.getGenotype()).isEqualTo(GenoType.AS);
     }
 
     @Test

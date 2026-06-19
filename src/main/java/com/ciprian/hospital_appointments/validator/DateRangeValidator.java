@@ -5,6 +5,7 @@ import jakarta.validation.ConstraintValidatorContext;
 
 import java.lang.reflect.Field;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class DateRangeValidator implements ConstraintValidator<ValidDateRange, Object> {
@@ -28,8 +29,23 @@ public class DateRangeValidator implements ConstraintValidator<ValidDateRange, O
             start.setAccessible(true);
             end.setAccessible(true);
 
-            var startDate = (LocalDate) start.get(o);
-            var endDate = (LocalDate) end.get(o);
+            Object startValue = start.get(o);
+            Object endValue = end.get(o);
+
+            if (startValue instanceof LocalDateTime startDt && endValue instanceof LocalDateTime endDt) {
+                if (Objects.isNull(startDt) || Objects.isNull(endDt)) return true;
+                boolean valid = !endDt.isBefore(startDt);
+                if (!valid) {
+                    constraintValidatorContext.disableDefaultConstraintViolation();
+                    constraintValidatorContext.buildConstraintViolationWithTemplate(constraintValidatorContext.getDefaultConstraintMessageTemplate())
+                            .addPropertyNode(endDateField)
+                            .addConstraintViolation();
+                }
+                return valid;
+            }
+
+            var startDate = (LocalDate) startValue;
+            var endDate = (LocalDate) endValue;
 
             if (Objects.isNull(startDate) || Objects.isNull(endDate)) {
                 return true;

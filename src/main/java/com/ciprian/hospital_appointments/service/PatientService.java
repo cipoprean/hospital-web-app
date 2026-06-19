@@ -63,9 +63,9 @@ public class PatientService {
             patient.setKnownAllergies(patientDto.getKnownAllergies());
         }
 
-        Optional.ofNullable(patientDto.getBirthDate()).ifPresent(patient::setBirthDate);
+        Optional.ofNullable(patientDto.getBirthDate()).ifPresent(patient::setBirthday);
         Optional.ofNullable(patientDto.getBloodGroup()).ifPresent(patient::setBloodGroup);
-        Optional.ofNullable(patientDto.getGenoType()).ifPresent(patient::setGenoType);
+        Optional.ofNullable(patientDto.getGenoType()).ifPresent(patient::setGenotype);
 
         patientRepository.save(patient);
 
